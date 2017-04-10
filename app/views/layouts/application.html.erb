@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>INITIA</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <footer>
+    <% if signed_in?  %>
+          <%= button_to "", logged_path, :method => "get", :class => "myButtonHome"%>
+    <% else %>
+        <%= link_to 'Sign in', sign_in_path %>
+          <img src="http://i.imgur.com/Qk96lBM.png"/>
+    <% end %>
+    </footer>
+    <section>
+      <div id="flash">
+        <% flash.each do |key, value| %>
+            <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+      </div>
+      <%= yield %>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h1>Eletricidade</h1>
+</head>
+<script>
+    x=233;
+    document.getElementById("result").innerHTML = x+"€";
+</script>
+<body>
+    <div id="result"></div>
+  <div class="myProgress">
+    <div class="myBar">10%</div>
+  </div>
+    Eletricidade
+  <label class="switch">
+    <input type="checkbox" checked>
+    <div class="slider round"></div>
+  </label><br><br>
+    <%= button_to "", settings_path, :method => "get", :class => "myButtonSettings"%>
+</body>
+</html>
