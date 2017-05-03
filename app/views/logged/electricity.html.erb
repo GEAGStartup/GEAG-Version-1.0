@@ -3,10 +3,11 @@
 <head>
   <h1>Eletricidade</h1>
 </head>
-<script>
-    x=233;
-    document.getElementById("result").innerHTML = x+"€";
-</script>
+
+  <%= @meters.each do |meter| %>
+       <%= meter.value %>
+  <% end %>
+
 <body>
     <div id="result"></div>
   <div class="myProgress">

@@ -10939,3 +10939,634 @@ Migrating to CreateAlerts (20170501133136)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for 127.0.0.1 at 2017-05-03 17:49:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LoggedController#first as HTML
+  Rendering logged/first.html.erb within layouts/application
+  Rendered logged/first.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "5cfeb1b2a51086a663b9ca339c84fcd46149c597"], ["LIMIT", 1]]
+Completed 200 OK in 781ms (Views: 747.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-05-03 17:50:03 +0100
+Processing by Clearance::SessionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "5cfeb1b2a51086a663b9ca339c84fcd46149c597"], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/_form.html.erb (48.2ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application (114.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "5cfeb1b2a51086a663b9ca339c84fcd46149c597"], ["LIMIT", 1]]
+Completed 200 OK in 240ms (Views: 237.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2017-05-03 17:50:05 +0100
+Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"tiago.silva.1996@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tiago.silva.1996@hotmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 85ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-03 17:50:05 +0100
+Processing by LoggedController#first as HTML
+  Rendering logged/first.html.erb within layouts/application
+  Rendered logged/first.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 104.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-03 17:50:07 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  Rendered logged/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 17:50:08 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7:   <tr>
+     8:     <th>Name</th>
+     9:   </tr>
+    10:   <%= @consumptions.each do |consumption| %>
+    11:       <tr>
+    12:         <td><%= consumption.value %></td>
+    13:       </tr>
+  
+app/views/logged/electricity.html.erb:10:in `_app_views_logged_electricity_html_erb__85749400_75645372'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (847.0ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 17:55:37 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3: <head>
+    4:   <h1>Eletricidade</h1>
+    5: </head>
+    6: <% @consumptions.each do |consumption| %>
+    7:     <%= consumption.value %>
+    8: <% end %>
+    9: <script>
+  
+app/views/logged/electricity.html.erb:6:in `_app_views_logged_electricity_html_erb__85749400_84420888'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (821.4ms)
+  [1m[36mConsumption Load (0.0ms)[0m  [1m[34mSELECT  "consumptions".* FROM "consumptions" ORDER BY "consumptions"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" ORDER BY "meters"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConsumption Load (0.0ms)[0m  [1m[34mSELECT "consumptions".* FROM "consumptions"[0m
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 17:58:39 +0100
+  
+ActionController::RoutingError (uninitialized constant LoggedController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+clearance (1.16.0) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (16.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1215.2ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 17:59:32 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 97.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:01:03 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mConsumption Load (1.0ms)[0m  [1m[34mSELECT "consumptions".* FROM "consumptions"[0m
+  Rendered logged/electricity.html.erb within layouts/application (47.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 172ms (Views: 145.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:01:42 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7:   <tr>
+     8:     <th>Name</th>
+     9:   </tr>
+    10:   <%= @consumptions.each do |consumption| %>
+    11:       <tr>
+    12:         <td><%= consumption.value %></td>
+    13:       </tr>
+  
+app/views/logged/electricity.html.erb:10:in `_app_views_logged_electricity_html_erb__85749400_37472256'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (859.3ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:02:19 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 101.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:02:59 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mConsumption Load (1.0ms)[0m  [1m[34mSELECT "consumptions".* FROM "consumptions"[0m
+  Rendered logged/electricity.html.erb within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `value' for #<Consumption::ActiveRecord_Relation:0x6229518>):
+    3: <head>
+    4:   <h1>Eletricidade</h1>
+    5: </head>
+    6: <%= @consumptions.value.first %>
+    7: <table>
+    8:   <tr>
+    9:     <th>Name</th>
+  
+app/views/logged/electricity.html.erb:6:in `_app_views_logged_electricity_html_erb__85749400_51431592'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (864.2ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:03:53 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (1.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 119ms (Views: 98.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:04:42 +0100
+Processing by LoggedController#electricity as HTML
+  [1m[36mMeter Load (1.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" ORDER BY "meters"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Meter:0x9f411f0>):
+     8:   <tr>
+     9:     <th>Name</th>
+    10:   </tr>
+    11:   <%= @meters.each do |meter| %>
+    12:       <tr>
+    13:         <td><%= meter.value %></td>
+    14:       </tr>
+  
+app/views/logged/electricity.html.erb:11:in `_app_views_logged_electricity_html_erb__85749400_83493696'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (850.3ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:05:07 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 122ms (Views: 105.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:05:18 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 115ms (Views: 97.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:05:21 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:05:58 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 122ms (Views: 103.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-03 18:06:00 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  Rendered logged/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 93.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-03 18:06:01 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 94.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-03 18:06:03 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  Rendered logged/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-05-03 18:06:05 +0100
+Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "c1132afa5c788296fda83562370b0982ddb93049"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["updated_at", 2017-05-03 17:06:05 UTC], ["id", 1]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 15ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-05-03 18:06:05 +0100
+Processing by Clearance::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/_form.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 186ms (Views: 185.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-05-03 18:06:07 +0100
+Processing by Clearance::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/_form.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 150ms (Views: 153.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-05-03 18:06:07 +0100
+Processing by Clearance::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/_form.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 165ms (Views: 167.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-03 18:06:10 +0100
+Processing by LoggedController#first as HTML
+  Rendering logged/first.html.erb within layouts/application
+  Rendered logged/first.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 102ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-05-03 18:08:38 +0100
+Processing by Clearance::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/_form.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 160ms (Views: 158.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2017-05-03 18:08:39 +0100
+Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"tiago.silva.1996@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tiago.silva.1996@hotmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-03 18:08:40 +0100
+Processing by LoggedController#first as HTML
+  Rendering logged/first.html.erb within layouts/application
+  Rendered logged/first.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 87.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-03 18:08:41 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  Rendered logged/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 96.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:08:42 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:09:00 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:09:03 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:09:12 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/electricity.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/electricity.html.erb:32: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/logged/electricity.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/logged/electricity.html.erb:32: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (840.2ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:09:20 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 101.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:09:41 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["LIMIT", 1]]
+Completed 200 OK in 111ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:09:46 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 96.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:09:47 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "94fbc26bd1deb8ab8066ae3ed4c16668dfbef527"], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:11:21 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `value' for #<Meter::ActiveRecord_Relation:0xa4825d0>):
+    3: <head>
+    4:   <h1>Eletricidade</h1>
+    5: </head>
+    6:   <%= @meters.value %>
+    7:   <%= @meters.each do |meter| %>
+    8:        <%= meter.value %>
+    9:   <% end %>
+  
+app/views/logged/electricity.html.erb:6:in `_app_views_logged_electricity_html_erb__85749400_86248572'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (846.3ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:11:34 +0100
+Processing by LoggedController#electricity as HTML
+  Rendering logged/electricity.html.erb within layouts/application
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT "meters".* FROM "meters"[0m
+  Rendered logged/electricity.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `value' for #<Meter::ActiveRecord_Relation:0xa5a7f88>):
+    3: <head>
+    4:   <h1>Eletricidade</h1>
+    5: </head>
+    6:   <%= @meters.value.first %>
+    7:   <%= @meters.each do |meter| %>
+    8:        <%= meter.value %>
+    9:   <% end %>
+  
+app/views/logged/electricity.html.erb:6:in `_app_views_logged_electricity_html_erb__85749400_86849988'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (862.3ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:15:11 +0100
+Processing by LoggedController#electricity as HTML
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Meter:0xa2592f8>):
+    4:   <h1>Eletricidade</h1>
+    5: </head>
+    6:   
+    7:   <%= @meters.each do |meter| %>
+    8:        <%= meter.value %>
+    9:   <% end %>
+   10: <body>
+  
+app/views/logged/electricity.html.erb:7:in `_app_views_logged_electricity_html_erb__85749400_85115760'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (856.3ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:15:54 +0100
+Processing by LoggedController#electricity as HTML
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for #<Meter:0x90878a0>):
+    3: <head>
+    4:   <h1>Eletricidade</h1>
+    5: </head>
+    6:   <%= @meters.all%>
+    7: 
+    8: <body>
+    9:     <div id="result"></div>
+  
+app/views/logged/electricity.html.erb:6:in `_app_views_logged_electricity_html_erb__85749400_75770676'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (935.5ms)
+Started GET "/electricity" for 127.0.0.1 at 2017-05-03 18:16:12 +0100
+Processing by LoggedController#electricity as HTML
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for #<Meter:0x9d97a90>):
+    3: <head>
+    4:   <h1>Eletricidade</h1>
+    5: </head>
+    6:   <%= @meters.all%>
+    7: 
+    8: <body>
+    9:     <div id="result"></div>
+  
+app/views/logged/electricity.html.erb:6:in `_app_views_logged_electricity_html_erb__85749400_82622160'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (870.3ms)
