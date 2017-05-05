@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @consumption.value %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @consumption.date %>
+</p>
+
+<p>
+  <strong>Meter:</strong>
+  <%= @consumption.meter_id %>
+</p>
+
+<%= link_to 'Edit', edit_consumption_path(@consumption) %> |
+<%= link_to 'Back', consumptions_path %>

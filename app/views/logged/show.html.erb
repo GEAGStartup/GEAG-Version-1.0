@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
-<img style ="position:absolute; TOP:55px; LEFT:20px;" src="http://i.imgur.com/VDy0qP2.png" /><br><br><br><br><br><br><br><br>
-<a href="electricity" class="button1">Eletricidade</a><br><br><br>
-<a href="water" class="button2">Água</a><br><br><br>
-<a href="gas" class="button3">Gás</a><br><br><br>
-<%= button_to "", settings_path, :method => "get", :class => "myButtonSettings"%>
-<%= button_to 'Sign out', sign_out_path, method: :delete %>
+<header>
+  <% if signed_in?  %>
+      <img style ="position:absolute; TOP:55px; LEFT:20px;" src="http://i.imgur.com/VDy0qP2.png" /><br><br><br><br><br><br><br><br>
+      <a href="electricity" class="button1">Eletricidade</a><br><br><br>
+      <a href="water" class="button2">Água</a><br><br><br>
+      <a href="gas" class="button3">Gás</a><br><br><br>
+      <%= button_to "", settings_path, :method => "get", :class => "myButtonSettings"%>
+      <%= button_to 'Sign out', sign_out_path, method: :delete %>
+  <% else %>
+  <% end %>
+</header>
 </body>
 </html>
 

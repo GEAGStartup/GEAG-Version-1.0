@@ -2,13 +2,13 @@ class LoggedController < ApplicationController
   def show
   end
   def electricity
-    @meters = Meter.find(1)
+    @meter = Meter.find_by(type_id:1, user_id: current_user.id)
   end
   def water
-    @meters = Meter.find(2)
+    @meter = Meter.find_by(type_id:2, user_id: current_user.id)
   end
   def gas
-    @meters = Meter.find(3)
+    @meter = Meter.find_by(type_id:3, user_id: current_user.id)
   end
   def settings
 
