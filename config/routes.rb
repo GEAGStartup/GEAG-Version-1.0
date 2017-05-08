@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :types
   resources :application
   resources :consumptions
+  resources :alerts
   root to: "logged#show"
   get 'logged' , to: "logged#show"
   get 'electricity' , to: "logged#electricity"
