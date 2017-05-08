@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :application
   resources :consumptions
   resources :alerts
+  resources :limits
   root to: "logged#show"
   get 'logged' , to: "logged#show"
   get 'electricity' , to: "logged#electricity"

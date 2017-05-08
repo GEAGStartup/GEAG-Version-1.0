@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170501133136) do
+ActiveRecord::Schema.define(version: 20170508163953) do
 
   create_table "alerts", force: :cascade do |t|
     t.string   "title"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20170501133136) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["meter_id"], name: "index_consumptions_on_meter_id"
+  end
+
+  create_table "limits", force: :cascade do |t|
+    t.integer  "value"
+    t.integer  "meter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meter_id"], name: "index_limits_on_meter_id"
   end
 
   create_table "meters", force: :cascade do |t|

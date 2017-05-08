@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @limit.value %>
+</p>
+
+<p>
+  <strong>Meter:</strong>
+  <%= @limit.meter %>
+</p>
+
+<%= link_to 'Edit', edit_limit_path(@limit) %> |
+<%= link_to 'Back', limits_path %>
