@@ -2,12 +2,19 @@
 <html>
 <head>
   <h1>Água</h1>
-  <%= @meter.value%>
-
 </head>
+<%= @meter.value%>
+<%= @limit.limit_value %>
+<body>
+<div id="result"></div>
+<div class="myProgress">
+  <div class="myBar">10%</div>
+</div>
+Água
 <label class="switch">
   <input type="checkbox" checked>
   <div class="slider round"></div>
 </label><br><br>
 <%= button_to "", settings_path, :method => "get", :class => "myButtonSettings"%>
+</body>
 </html>

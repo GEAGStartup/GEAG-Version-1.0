@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508163953) do
+ActiveRecord::Schema.define(version: 20170508171725) do
 
   create_table "alerts", force: :cascade do |t|
     t.string   "title"
@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 20170508163953) do
   end
 
   create_table "limits", force: :cascade do |t|
-    t.integer  "value"
+    t.integer  "limit_value"
     t.integer  "meter_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["meter_id"], name: "index_limits_on_meter_id"
   end
 

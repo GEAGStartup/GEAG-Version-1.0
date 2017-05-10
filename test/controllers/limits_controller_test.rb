@@ -17,7 +17,7 @@ class LimitsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create limit" do
     assert_difference('Limit.count') do
-      post limits_url, params: { limit: { meter: @limit.meter, value: @limit.value } }
+      post limits_url, params: { limit: { limit_value: @limit.limit_value, meter_id: @limit.meter_id } }
     end
 
     assert_redirected_to limit_url(Limit.last)
@@ -34,7 +34,7 @@ class LimitsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update limit" do
-    patch limit_url(@limit), params: { limit: { meter: @limit.meter, value: @limit.value } }
+    patch limit_url(@limit), params: { limit: { limit_value: @limit.limit_value, meter_id: @limit.meter_id } }
     assert_redirected_to limit_url(@limit)
   end
 

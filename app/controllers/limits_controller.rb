@@ -69,6 +69,6 @@ class LimitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def limit_params
-      params.require(:limit).permit(:value, :meter)
+      params.require(:limit).permit(:limit_value, :meter_id)
     end
 end
