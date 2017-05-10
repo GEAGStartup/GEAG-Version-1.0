@@ -1,10 +1,10 @@
-<%= form_for(limit) do |f| %>
-  <% if limit.errors.any? %>
+<%= form_for(limite) do |f| %>
+  <% if limite.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(limit.errors.count, "error") %> prohibited this limit from being saved:</h2>
+      <h2><%= pluralize(limite.errors.count, "error") %> prohibited this limite from being saved:</h2>
 
       <ul>
-      <% limit.errors.full_messages.each do |message| %>
+      <% limite.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :limit_value %>
-    <%= f.number_field :limit_value %>
+    <%= f.label :value %>
+    <%= f.number_field :value %>
   </div>
 
   <div class="field">
