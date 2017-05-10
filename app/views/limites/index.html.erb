@@ -15,7 +15,7 @@
     <% @limites.each do |limite| %>
       <tr>
         <td><%= limite.value %></td>
-        <td><%= limite.meter %></td>
+        <td><%= limite.meter_id %></td>
         <td><%= link_to 'Show', limite %></td>
         <td><%= link_to 'Edit', edit_limite_path(limite) %></td>
         <td><%= link_to 'Destroy', limite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
