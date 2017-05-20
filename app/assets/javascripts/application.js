@@ -14,7 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-function saveValues(value1,value2,value3){
-    document.getElementById("value1").innerHTML = "";
-}

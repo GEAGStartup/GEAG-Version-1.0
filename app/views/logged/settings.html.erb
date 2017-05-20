@@ -13,12 +13,18 @@
       <option value="$">$</option>
       <option value="£">£</option>
     </select><br><br>
-    <u>Eletricidade</u><br>
-    Limite desejado de gastos:<textarea rows="1" cols="6" id="value1"></textarea><br><br>
-    <u>Água</u><br>
-    Limite desejado de gastos:<textarea rows="1" cols="6"id="value2"></textarea><br><br>
-    <u>Gás</u><br>
-    Limite desejado de gastos:<textarea rows="1" cols="6"id="value2"></textarea><br><br>
-    <button onclick:saveValues(value1,value2,value3)>Guardar valores</button>
+    <%=  form_tag url: { action: "create" }, html: { class: "listform"} do   %>
+    <%= label :type, :Eletricidade%>
+    <%= number_field :limite, :value1, in: 1.0..99999.0, placeholder: "Limite desejado" %>
+    <br> <br>
+    <%= label :type, :Água%>
+    <%= number_field :limite, :value2, in: 1.0..99999.0, placeholder: "Limite desejado" %>
+    <br> <br>
+    <%= label :type , :Gás %>
+    <%= number_field :limite, :value3, in: 1.0..99999.0, placeholder: "Limite desejado" %>
+    <br> <br>
+    <%= submit_tag "Guardar Limites" %>
+    <% end %>
+
 </body>
 </html>

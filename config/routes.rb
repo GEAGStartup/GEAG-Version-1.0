@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get 'water' , to: "logged#water"
   get 'gas' , to: "logged#gas"
   get 'settings', to:"logged#settings"
+  post 'settings', action:"logged#create", to: "logged#show"
   delete 'logged', to: "layouts#application"
 end
