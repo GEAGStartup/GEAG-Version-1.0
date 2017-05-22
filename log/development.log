@@ -23039,3 +23039,1291 @@ Processing by LoggedController#settings as HTML
 Completed 200 OK in 131ms (Views: 113.7ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-05-22 14:29:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (87.3ms)
+Completed 200 OK in 696ms (Views: 658.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/water" for 127.0.0.1 at 2017-05-22 14:29:26 +0100
+Processing by LoggedController#water as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (1.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 2], ["LIMIT", 1]]
+  Rendering logged/water.html.erb within layouts/application
+  Rendered logged/water.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 168ms (Views: 98.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 14:29:29 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 102ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/water" for 127.0.0.1 at 2017-05-22 14:29:31 +0100
+Processing by LoggedController#water as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 2], ["LIMIT", 1]]
+  Rendering logged/water.html.erb within layouts/application
+  Rendered logged/water.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 107ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 14:29:51 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (72.9ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 179ms (Views: 165.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create" for 127.0.0.1 at 2017-05-22 14:30:08 +0100
+Processing by LoggedController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"2", "value2"=>"2", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create"}}
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 113ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 14:38:25 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 90.9ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create" for 127.0.0.1 at 2017-05-22 14:38:34 +0100
+Processing by LoggedController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create"}}
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 100ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gas" for 127.0.0.1 at 2017-05-22 14:39:24 +0100
+Processing by LoggedController#gas as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  Rendering logged/gas.html.erb within layouts/application
+  Rendered logged/gas.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 125ms (Views: 86.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 14:39:26 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 102ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 14:39:28 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 14:50:43 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    13:       <option value="$">$</option>
+    14:       <option value="£">£</option>
+    15:     </select><br><br>
+    16:     <%=  form_for @limite, url: { action: "create" }, html: { class: "listform"} do   %>
+    17:     <%= label :type, :Eletricidade%>
+    18:     <%= number_field :limite, :value1, in: 1.0..99999.0, placeholder: "Limite desejado" %>
+    19:     <br> <br>
+  
+app/views/logged/settings.html.erb:16:in `_app_views_logged_settings_html_erb__44378894_80475924'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (796.2ms)
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 14:53:34 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"logged"}):
+    13:       <option value="$">$</option>
+    14:       <option value="£">£</option>
+    15:     </select><br><br>
+    16:     <%=  form_for Limite.new, url: { action: "create" }, html: { class: "listform"} do   %>
+    17:     <%= label :type, :Eletricidade%>
+    18:     <%= number_field :limite, :value1, in: 1.0..99999.0, placeholder: "Limite desejado" %>
+    19:     <br> <br>
+  
+app/views/logged/settings.html.erb:16:in `_app_views_logged_settings_html_erb__44378894_86296716'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (759.0ms)
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 14:58:28 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (21.1ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"logged"}):
+    13:       <option value="$">$</option>
+    14:       <option value="£">£</option>
+    15:     </select><br><br>
+    16:     <%=  form_for Limite.new, url: { action: "create" }, html: { class: "listform"} do   %>
+    17:     <%= label :type, :Eletricidade%>
+    18:     <%= number_field :limite, :value1, in: 1.0..99999.0, placeholder: "Limite desejado" %>
+    19:     <br> <br>
+  
+app/views/logged/settings.html.erb:16:in `_app_views_logged_settings_html_erb__44378894_83239044'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (756.2ms)
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 14:59:00 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/settings.html.erb:16: syntax error, unexpected ',', expecting ')'
+...er.append=   form_for (@limite, url: { action: "create" }, h...
+...                               ^
+C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/settings.html.erb:16: syntax error, unexpected ',', expecting keyword_end
+...ite, url: { action: "create" }, html: { class: "listform"}) ...
+...                               ^
+C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/settings.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+... }, html: { class: "listform"}) do   @output_buffer.safe_app...
+...                               ^
+C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/settings.html.erb:30: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/logged/settings.html.erb:16: syntax error, unexpected ',', expecting ')'
+app/views/logged/settings.html.erb:16: syntax error, unexpected ',', expecting keyword_end
+app/views/logged/settings.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+app/views/logged/settings.html.erb:30: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (753.0ms)
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 15:00:00 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 117ms (Views: 101.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 15:11:55 +0100
+Processing by LoggedController#settings as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.0ms)
+
+
+  
+NoMethodError (undefined method `value3' for :limite:Symbol):
+  
+app/controllers/logged_controller.rb:19:in `settings'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (749.0ms)
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 15:17:05 +0100
+Processing by LoggedController#settings as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `value3' for :limite:Symbol):
+  
+app/controllers/logged_controller.rb:18:in `settings'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (741.0ms)
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 15:28:46 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 157ms (Views: 142.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 15:28:48 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 120ms (Views: 104.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-22 15:28:49 +0100
+Processing by LoggedController#electricity as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 1], ["LIMIT", 1]]
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 130ms (Views: 87.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 15:29:21 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 98ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 15:40:27 +0100
+  
+NoMethodError (undefined method `form_tag' for #<ActionDispatch::Routing::Mapper:0x9520a28>):
+  
+config/routes.rb:18:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (748.0ms)
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 15:42:32 +0100
+  
+ArgumentError (can't use collection outside resource(s) scope):
+  
+config/routes.rb:9:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (745.5ms)
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 15:43:02 +0100
+  
+NoMethodError (undefined method `form_tag' for #<ActionDispatch::Routing::Mapper:0x4951b90>):
+  
+config/routes.rb:21:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (729.9ms)
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 15:49:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for LoggedController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+clearance (1.16.0) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (6.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 15:50:13 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"logged"} missing required keys: [:id]):
+    12:   <body>
+    13:     <footer>
+    14:     <% if signed_in?  %>
+    15:           <%= button_to "", logged_path, :method => "get", :class => "myButtonHome"%>
+    16:     <% else %>
+    17:         <%= link_to 'Sign in', sign_in_path %>
+    18:           <img src="http://i.imgur.com/Qk96lBM.png"/>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___287021239_37187268'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (19.1ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (767.1ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 15:50:37 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 114ms (Views: 99.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 15:50:49 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/settings.html.erb:16: syntax error, unexpected tLABEL
+...append=   form_tag (controller: :logged, action: :create, ht...
+...                               ^
+C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/settings.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+...te, html: { class: "listform"}) do   @output_buffer.safe_app...
+...                               ^
+C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/settings.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/logged/settings.html.erb:16: syntax error, unexpected tLABEL
+app/views/logged/settings.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+app/views/logged/settings.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (751.0ms)
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 15:51:17 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/settings.html.erb:16: syntax error, unexpected tLABEL
+...append=   form_tag (controller: :logged, action: :create) do...
+...                               ^
+C:/Users/Tiago/RubymineProjects/GEAG-Version-1.0/app/views/logged/settings.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/logged/settings.html.erb:16: syntax error, unexpected tLABEL
+app/views/logged/settings.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (744.5ms)
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 15:52:20 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (32.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 135ms (Views: 121.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 15:52:25 +0100
+Processing by LoggedController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 101ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 15:53:09 +0100
+Processing by LoggedController#settings as HTML
+  Parameters: {"html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 94.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 15:53:11 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 99ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 15:53:13 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 92.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 15:53:19 +0100
+Processing by LoggedController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 102ms (Views: 86.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gas" for 127.0.0.1 at 2017-05-22 15:53:22 +0100
+Processing by LoggedController#gas as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  Rendering logged/gas.html.erb within layouts/application
+  Rendered logged/gas.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 119ms (Views: 85.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 15:59:28 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 107ms (Views: 92.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 15:59:29 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 109ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 15:59:34 +0100
+Processing by LoggedController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 101ms (Views: 86.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:04:19 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 111ms (Views: 98.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:04:25 +0100
+Processing by LoggedController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 101ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:05:05 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 104ms (Views: 91.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:10:31 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 104ms (Views: 90.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:10:33 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 86.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:10:43 +0100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for LoggedController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+clearance (1.16.0) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 16:13:07 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 102ms (Views: 89.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:13:09 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 99ms (Views: 85.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:13:14 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 2)):
+  
+app/controllers/logged_controller.rb:25:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (752.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 16:13:41 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 101ms (Views: 88.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:13:43 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 110.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:13:47 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/logged_controller.rb:27:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (747.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 16:14:20 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 101ms (Views: 89.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:14:22 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 94.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:14:26 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+Redirected to http://localhost:3000/logged
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:14:27 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 102ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:15:53 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 90.8ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:15:58 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 2)):
+  
+app/controllers/logged_controller.rb:25:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (751.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 16:16:52 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 119ms (Views: 105.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:16:54 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:16:59 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "limites" SET "value" = ?, "updated_at" = ? WHERE "limites"."id" = ?[0m  [["value", nil], ["updated_at", 2017-05-22 15:16:59 UTC], ["id", 3]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/logged
+Completed 302 Found in 64ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:16:59 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 100ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gas" for 127.0.0.1 at 2017-05-22 16:17:54 +0100
+Processing by LoggedController#gas as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  Rendering logged/gas.html.erb within layouts/application
+  Rendered logged/gas.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into Fixnum):
+    46: <body onLoad="drawChart()">
+    47: <br><br>
+    48: <div class="myProgress">
+    49:   <div class="myBar" style="width: <%= ((@meter.value*100)/@limite.value) %>%">
+    50:     <%= ((@meter.value*100)/@limite.value) %>%</div>
+    51: </div>
+    52: 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+  
+app/views/logged/gas.html.erb:49:in `/'
+app/views/logged/gas.html.erb:49:in `_app_views_logged_gas_html_erb___218727122_84134628'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (743.9ms)
+Started GET "/water" for 127.0.0.1 at 2017-05-22 16:18:05 +0100
+Processing by LoggedController#water as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 2], ["LIMIT", 1]]
+  Rendering logged/water.html.erb within layouts/application
+  Rendered logged/water.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 97ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:22:13 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 97.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:22:17 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (1.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/logged
+Completed 302 Found in 20ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:22:17 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 107ms (Views: 94.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gas" for 127.0.0.1 at 2017-05-22 16:22:19 +0100
+Processing by LoggedController#gas as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  Rendering logged/gas.html.erb within layouts/application
+  Rendered logged/gas.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into Fixnum):
+    46: <body onLoad="drawChart()">
+    47: <br><br>
+    48: <div class="myProgress">
+    49:   <div class="myBar" style="width: <%= ((@meter.value*100)/@limite.value) %>%">
+    50:     <%= ((@meter.value*100)/@limite.value) %>%</div>
+    51: </div>
+    52: 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+  
+app/views/logged/gas.html.erb:49:in `/'
+app/views/logged/gas.html.erb:49:in `_app_views_logged_gas_html_erb___218727122_87969732'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (765.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 16:24:53 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 102ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:24:55 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 92.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:25:02 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"2", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "limites" SET "value" = ?, "updated_at" = ? WHERE "limites"."id" = ?[0m  [["value", 2], ["updated_at", 2017-05-22 15:25:02 UTC], ["id", 3]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/logged
+Completed 302 Found in 30ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:25:02 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 100ms (Views: 85.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gas" for 127.0.0.1 at 2017-05-22 16:25:21 +0100
+Processing by LoggedController#gas as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  Rendering logged/gas.html.erb within layouts/application
+  Rendered logged/gas.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 110ms (Views: 93.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:25:24 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 99ms (Views: 85.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:25:26 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 99ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:28:10 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 100.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:28:15 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "limites" SET "value" = ?, "updated_at" = ? WHERE "limites"."id" = ?[0m  [["value", nil], ["updated_at", 2017-05-22 15:28:15 UTC], ["id", 3]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/logged
+Completed 302 Found in 31ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:28:15 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 98ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:31:26 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 94.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:31:30 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `limite' for #<LoggedController:0x5efc650>):
+  
+app/controllers/logged_controller.rb:26:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (811.9ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 16:32:23 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 109ms (Views: 95.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:32:25 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 115ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:32:29 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+Unpermitted parameters: value2, value3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/logged
+Completed 302 Found in 22ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:32:29 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 112ms (Views: 97.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gas" for 127.0.0.1 at 2017-05-22 16:32:31 +0100
+Processing by LoggedController#gas as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (1.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  Rendering logged/gas.html.erb within layouts/application
+  Rendered logged/gas.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into Fixnum):
+    46: <body onLoad="drawChart()">
+    47: <br><br>
+    48: <div class="myProgress">
+    49:   <div class="myBar" style="width: <%= ((@meter.value*100)/@limite.value) %>%">
+    50:     <%= ((@meter.value*100)/@limite.value) %>%</div>
+    51: </div>
+    52: 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+  
+app/views/logged/gas.html.erb:49:in `/'
+app/views/logged/gas.html.erb:49:in `_app_views_logged_gas_html_erb___218727122_88117140'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (745.6ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 16:40:06 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 110ms (Views: 97.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:40:09 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:40:14 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1", "value2"=>"1", "value3"=>"1"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for "1":String):
+  
+app/controllers/logged_controller.rb:26:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (750.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-22 16:43:53 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 101ms (Views: 87.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:43:55 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 88.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:44:00 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"4", "value2"=>"3", "value3"=>"14"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "limites" SET "value" = ?, "updated_at" = ? WHERE "limites"."id" = ?[0m  [["value", 4], ["updated_at", 2017-05-22 15:44:00 UTC], ["id", 3]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/logged
+Completed 302 Found in 29ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:44:01 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 105ms (Views: 89.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gas" for 127.0.0.1 at 2017-05-22 16:44:21 +0100
+Processing by LoggedController#gas as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  Rendering logged/gas.html.erb within layouts/application
+  Rendered logged/gas.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 102ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:45:23 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 107ms (Views: 94.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2017-05-22 16:45:25 +0100
+Processing by LoggedController#settings as HTML
+  Rendering logged/settings.html.erb within layouts/application
+  Rendered logged/settings.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/settings?html%5Bclass%5D=listform&url%5Baction%5D=create&url%5Bcontroller%5D=logged" for 127.0.0.1 at 2017-05-22 16:46:03 +0100
+Processing by LoggedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "limite"=>{"value1"=>"1000", "value2"=>"75000", "value3"=>"5000"}, "commit"=>"Guardar Limites", "html"=>{"class"=>"listform"}, "url"=>{"action"=>"create", "controller"=>"logged"}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "limites" SET "value" = ?, "updated_at" = ? WHERE "limites"."id" = ?[0m  [["value", 1000], ["updated_at", 2017-05-22 15:46:03 UTC], ["id", 1]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "limites" SET "value" = ?, "updated_at" = ? WHERE "limites"."id" = ?[0m  [["value", 75000], ["updated_at", 2017-05-22 15:46:03 UTC], ["id", 2]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (1.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "limites" SET "value" = ?, "updated_at" = ? WHERE "limites"."id" = ?[0m  [["value", 5000], ["updated_at", 2017-05-22 15:46:03 UTC], ["id", 3]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/logged
+Completed 302 Found in 60ms (ActiveRecord: 27.7ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:46:03 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 104ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/water" for 127.0.0.1 at 2017-05-22 16:46:05 +0100
+Processing by LoggedController#water as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 2], ["LIMIT", 1]]
+  Rendering logged/water.html.erb within layouts/application
+  Rendered logged/water.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 114ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:46:06 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 114ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-22 16:46:07 +0100
+Processing by LoggedController#electricity as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (1.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (1.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 1], ["LIMIT", 1]]
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 122ms (Views: 105.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-22 16:46:09 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 99ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gas" for 127.0.0.1 at 2017-05-22 16:46:10 +0100
+Processing by LoggedController#gas as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "d91126bd99fe275b618e98cea6254b4a8b16230a"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 3], ["LIMIT", 1]]
+  Rendering logged/gas.html.erb within layouts/application
+  Rendered logged/gas.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 100ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+

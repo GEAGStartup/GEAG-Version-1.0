@@ -13,7 +13,7 @@
       <option value="$">$</option>
       <option value="£">£</option>
     </select><br><br>
-    <%=  form_tag url: { action: "create" }, html: { class: "listform"} do   %>
+    <%=  form_tag url: {controller: :logged, action: :create }, html: { class: "listform"} do   %>
     <%= label :type, :Eletricidade%>
     <%= number_field :limite, :value1, in: 1.0..99999.0, placeholder: "Limite desejado" %>
     <br> <br>
