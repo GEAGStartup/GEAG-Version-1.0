@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'gas' , to: "logged#gas"
   get 'settings', to:"logged#settings"
   delete 'logged', to: "layouts#application"
+  get 'users', to: "users#index"
   resources :meters
   resources :types
   resources :application

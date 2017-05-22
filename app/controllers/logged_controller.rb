@@ -22,12 +22,15 @@ class LoggedController < ApplicationController
   end
 
   def create
-    @limite = Limite.find_by(meter_id:(3*current_user.id-2))
-    @limite.update_attributes(value: params[:limite][:value1])
-    @limite = Limite.find_by(meter_id:(3*current_user.id-1))
-    @limite.update_attributes(value: params[:limite][:value2])
-    @limite = Limite.find_by(meter_id:(3*current_user.id))
-    @limite.update_attributes(value: params[:limite][:value3])
+    if (((params[:limite][:value1])!=nil?) && ((params[:limite][:value2])!=nil?) && ((params[:limite][:value3])!=nil?) )
+      @limite = Limite.find_by(meter_id:(3*current_user.id-2))
+      @limite.update_attributes(value: params[:limite][:value1])
+      @limite = Limite.find_by(meter_id:(3*current_user.id-1))
+      @limite.update_attributes(value: params[:limite][:value2])
+      @limite = Limite.find_by(meter_id:(3*current_user.id))
+      @limite.update_attributes(value: params[:limite][:value3])
+    end
+
     redirect_to logged_path
   end
 
