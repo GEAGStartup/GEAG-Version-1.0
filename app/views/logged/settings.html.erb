@@ -15,13 +15,13 @@
     </select><br><br>
     <%=  form_tag url: {controller: :logged, action: :create }, html: { class: "listform"} do   %>
     <%= label :type, :Eletricidade%>
-    <%= number_field :limite, :value1, in: 1.0..99999.0, placeholder: "Limite desejado" %>
+    <%= number_field :limite, :value1, in: 1.0..99999.0, required: true, placeholder: "Limite desejado" %>
     <br> <br>
     <%= label :type, :Água%>
-    <%= number_field :limite, :value2, in: 1.0..99999.0, placeholder: "Limite desejado" %>
+    <%= number_field :limite, :value2, in: 1.0..99999.0, required: true, placeholder: "Limite desejado" %>
     <br> <br>
     <%= label :type , :Gás %>
-    <%= number_field :limite, :value3, in: 1.0..99999.0, placeholder: "Limite desejado" %>
+    <%= number_field :limite, :value3, in: 1.0..99999.0, required: true, placeholder: "Limite desejado" %>
     <br> <br>
     <%= submit_tag "Guardar Limites" %>
     <% end %>
