@@ -42,12 +42,12 @@
       };
   </script>
 </head>
-&nbsp;&nbsp;<%= @meter.value %> m³
+&nbsp;&nbsp;<%= '%.2f' %((@meter.value - @meter.valueStartMonth)*0.2692) %> €
 <body onLoad="drawChart()">
 <br><br>
 <div class="myProgress">
-  <div class="myBar" style="width: <%= ((@meter.value*100)/@limite.value) %>%">
-    <%= ((@meter.value*100)/@limite.value) %>%</div>
+  <div class="myBar" style="width: <%= '%.2f' %(((((@meter.value - @meter.valueStartMonth)*0.2692))*100)/@limite.value) %>%">
+    <%= '%.2f' %(((((@meter.value - @meter.valueStartMonth)*0.2692))*100)/@limite.value) %>%</div>
 </div>
 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
 <%= @limite.value%><br><br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -55,10 +55,7 @@
   <input type="checkbox" checked>
   <div class="slider round"></div>
 </label><br><br>
-
-
 <div id="container"></div><br><br>
-
 <%= button_to "", settings_path, :method => "get", :class => "myButtonSettings"%>
 </body>
 </html>

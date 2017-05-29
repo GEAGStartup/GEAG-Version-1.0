@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: "logged#show"
   post 'settings' => 'logged#create'
+  get 'getPost', to: "logged#getPost"
+  post 'getPost' => 'logged#savePostValue'
   get 'logged' , to: "logged#show"
   get 'electricity' , to: "logged#electricity"
   get 'water' , to: "logged#water"

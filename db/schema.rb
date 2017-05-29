@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510152313) do
+ActiveRecord::Schema.define(version: 20170529155326) do
 
   create_table "alerts", force: :cascade do |t|
     t.string   "title"
@@ -40,8 +40,9 @@ ActiveRecord::Schema.define(version: 20170510152313) do
     t.integer  "value"
     t.integer  "type_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "valueStartMonth"
     t.index ["type_id"], name: "index_meters_on_type_id"
     t.index ["user_id"], name: "index_meters_on_user_id"
   end

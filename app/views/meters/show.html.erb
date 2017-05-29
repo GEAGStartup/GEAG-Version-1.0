@@ -15,5 +15,10 @@
   <%= @meter.user_id %>
 </p>
 
+<p>
+  <strong>Value at the start of the Month:</strong>
+  <%= @meter.valueStartMonth %>
+</p>
+
 <%= link_to 'Edit', edit_meter_path(@meter) %> |
 <%= link_to 'Back', meters_path %>

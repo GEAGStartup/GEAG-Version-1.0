@@ -8,7 +8,8 @@
       <th>Value</th>
       <th>Type</th>
       <th>User</th>
-      <th colspan="3"></th>
+      <th>Value at the Start of the Month</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -18,6 +19,7 @@
         <td><%= meter.value %></td>
         <td><%= meter.type_id %></td>
         <td><%= meter.user_id %></td>
+        <td><%= meter.valueStartMonth %></td>
         <td><%= link_to 'Show', meter %></td>
         <td><%= link_to 'Edit', edit_meter_path(meter) %></td>
         <td><%= link_to 'Destroy', meter, method: :delete, data: { confirm: 'Are you sure?' } %></td>

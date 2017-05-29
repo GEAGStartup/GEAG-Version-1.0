@@ -58,6 +58,7 @@
     display:block;
     cursor: pointer;
 }
+
 .myButtonHome{
     background:url(http://i.imgur.com/62tfK5q.png) no-repeat;
     cursor:pointer;
@@ -164,4 +165,11 @@ input:checked + .slider:before {
     height: 400px;
 
 }
-
+.myButtonSignIn{
+    background:url(http://i.imgur.com/4IFvISp.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:42px;
+    height:50px;
+    margin-left:50px;
+}

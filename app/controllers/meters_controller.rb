@@ -69,6 +69,6 @@ class MetersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meter_params
-      params.require(:meter).permit(:value, :type_id, :user_id)
+      params.require(:meter).permit(:value, :type_id, :user_id,:valueStartMonth)
     end
 end

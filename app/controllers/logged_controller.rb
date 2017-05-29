@@ -31,4 +31,15 @@ class LoggedController < ApplicationController
     redirect_to logged_path
   end
 
+  def savePostValue
+      @meter = Meter.find(params[:meters][:meter_id])
+      @meter.update_attributes(value: params[:meters][:value])
+      if @meter.save
+        flash.now[:success] = 'Post received and saved correctly!'
+      else
+        flash.now[:alert] = 'Error receiving or saving post!'
+      end
+      redirect_to logged_path
+  end
+
 end
