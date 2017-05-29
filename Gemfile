@@ -22,7 +22,7 @@ gem 'ocr', '~> 0.3.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Gem de autenticação
-gem 'clearance', '~> 1.16.0'
+gem 'clearance', :git => 'git://github.com/GEAGStartup/clearance'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

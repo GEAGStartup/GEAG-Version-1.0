@@ -108,6 +108,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="highcharts" level="application" />
+    <orderEntry type="library" name="exporting" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actioncable (v5.0.2, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v5.0.2, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v5.0.2, ruby-2.2.6-p396) [gem]" level="application" />
@@ -121,7 +123,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.11, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.3, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.14.6, ruby-2.2.6-p396) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="clearance (v1.16.0, ruby-2.2.6-p396) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="clearance (v1.16.0@77b843, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.2.1, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.12.2, ruby-2.2.6-p396) [gem]" level="application" />
@@ -179,8 +181,6 @@
     <orderEntry type="library" scope="PROVIDED" name="web-console (v3.4.0, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.6.5, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.2, ruby-2.2.6-p396) [gem]" level="application" />
-    <orderEntry type="library" name="highcharts" level="application" />
-    <orderEntry type="library" name="exporting" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
