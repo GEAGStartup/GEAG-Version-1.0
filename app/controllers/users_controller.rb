@@ -25,17 +25,16 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    Meter.create(id:(3*current_user.id-2),value:10000,type_id:1,user_id:current_user.id,valueStartMonth:9000)
+    Meter.create(id:(3*current_user.id-1),value:15000,type_id:2,user_id:current_user.id,valueStartMonth:14500)
+    Meter.create(id:(3*current_user.id),value:20000,type_id:3,user_id:current_user.id,valueStartMonth:19300)
+    Limite.create(id:(3*current_user.id-2),value:50,meter_id:(3*current_user.id-2))
+    Limite.create(id:(3*current_user.id-1),value:50,meter_id:(3*current_user.id-1))
+    Limite.create(id:(3*current_user.id),value:50,meter_id:(3*current_user.id))
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
-        Meter.create(value:10000,type_id:1,user_id:current_user.id,valueStartMonth:9000)
-        Meter.create(value:15000,type_id:2,user_id:current_user.id,valueStartMonth:14500)
-        Meter.create(value:20000,type_id:3,user_id:current_user.id,valueStartMonth:19300)
-        Limite.create(value:50,meter_id:(3*current_user.id-2))
-        Limite.create(value:50,meter_id:(3*current_user.id-1))
-        Limite.create(value:50,meter_id:(3*current_user.id))
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }

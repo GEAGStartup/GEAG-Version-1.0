@@ -27858,3 +27858,223 @@ Processing by LoggedController#show as HTML
 Completed 200 OK in 100ms (Views: 85.8ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-05-29 19:39:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "2a72250e1d737f8ad293d8b0add0a481f679e9c7"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (72.2ms)
+Completed 200 OK in 437ms (Views: 409.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-05-29 19:39:56 +0100
+Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "2a72250e1d737f8ad293d8b0add0a481f679e9c7"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "f3367b1adbf5d07e6015756472a689e330d51068"], ["updated_at", 2017-05-29 18:39:56 UTC], ["id", 1]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 14ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-05-29 19:39:57 +0100
+Processing by Clearance::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/_form.html.erb (19.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 188ms (Views: 188.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-05-29 19:39:58 +0100
+Processing by Clearance::UsersController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/users/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/users/_form.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/users/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 173ms (Views: 172.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-05-29 19:40:09 +0100
+Processing by Clearance::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"pedroboosted@titi.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pedroboosted@titi.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "remember_token") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", 2017-05-29 18:40:09 UTC], ["updated_at", 2017-05-29 18:40:09 UTC], ["email", "pedroboosted@titi.com"], ["encrypted_password", "$2a$10$MSFIIScx7yqTe5jc5m1fiegbwJs72.jiuhgpbdZM8MddafelXOZSy"], ["remember_token", "8c6a2768a56351fed74296aedaa3d4281bca49a9"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mType Load (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "meters" ("value", "type_id", "user_id", "created_at", "updated_at", "valueStartMonth") VALUES (?, ?, ?, ?, ?, ?)[0m  [["value", 10000], ["type_id", 1], ["user_id", 2], ["created_at", 2017-05-29 18:40:09 UTC], ["updated_at", 2017-05-29 18:40:09 UTC], ["valueStartMonth", 9000]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mType Load (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "meters" ("value", "type_id", "user_id", "created_at", "updated_at", "valueStartMonth") VALUES (?, ?, ?, ?, ?, ?)[0m  [["value", 15000], ["type_id", 2], ["user_id", 2], ["created_at", 2017-05-29 18:40:09 UTC], ["updated_at", 2017-05-29 18:40:09 UTC], ["valueStartMonth", 14500]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mType Load (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "meters" ("value", "type_id", "user_id", "created_at", "updated_at", "valueStartMonth") VALUES (?, ?, ?, ?, ?, ?)[0m  [["value", 20000], ["type_id", 3], ["user_id", 2], ["created_at", 2017-05-29 18:40:09 UTC], ["updated_at", 2017-05-29 18:40:09 UTC], ["valueStartMonth", 19300]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "limites" ("value", "meter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["value", 50], ["meter_id", 4], ["created_at", 2017-05-29 18:40:09 UTC], ["updated_at", 2017-05-29 18:40:09 UTC]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "limites" ("value", "meter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["value", 50], ["meter_id", 5], ["created_at", 2017-05-29 18:40:09 UTC], ["updated_at", 2017-05-29 18:40:09 UTC]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (1.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "limites" ("value", "meter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["value", 50], ["meter_id", 6], ["created_at", 2017-05-29 18:40:09 UTC], ["updated_at", 2017-05-29 18:40:09 UTC]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 302 Found in 227ms (ActiveRecord: 77.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-29 19:40:09 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "8c6a2768a56351fed74296aedaa3d4281bca49a9"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 119ms (Views: 105.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-29 19:40:10 +0100
+Processing by LoggedController#electricity as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "8c6a2768a56351fed74296aedaa3d4281bca49a9"], ["LIMIT", 1]]
+  [1m[36mMeter Load (1.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 4], ["LIMIT", 1]]
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 115ms (Views: 99.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-29 23:56:49 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "8c6a2768a56351fed74296aedaa3d4281bca49a9"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (115.8ms)
+Completed 200 OK in 887ms (Views: 843.1ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-05-29 23:57:06 +0100
+Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "8c6a2768a56351fed74296aedaa3d4281bca49a9"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "c6d682798658ebe33c77273fc54a0157cfdee324"], ["updated_at", 2017-05-29 22:57:06 UTC], ["id", 2]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 15ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-05-29 23:57:07 +0100
+Processing by Clearance::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/_form.html.erb (47.2ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application (118.9ms)
+Completed 200 OK in 264ms (Views: 263.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2017-05-29 23:57:16 +0100
+Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"12345678@g", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "12345678@g"], ["LIMIT", 1]]
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/_form.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/sessions/new.html.erb within layouts/application (32.6ms)
+Completed 401 Unauthorized in 194ms (Views: 176.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-05-29 23:57:18 +0100
+Processing by Clearance::UsersController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/users/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/users/_form.html.erb (3.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/clearance-1.16.0/app/views/users/new.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 234ms (Views: 232.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-05-29 23:57:29 +0100
+Processing by Clearance::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"1324567@hhh.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "1324567@hhh.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "remember_token") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", 2017-05-29 22:57:29 UTC], ["updated_at", 2017-05-29 22:57:29 UTC], ["email", "1324567@hhh.com"], ["encrypted_password", "$2a$10$LZ77fAXF7Ogt4TfpZtpMNO01.NtO79INbNsYwASVwfz14Ngrp/4Ly"], ["remember_token", "3df7103893f0d52402b19dde068e78e438f2aaff"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mType Load (0.5ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "meters" ("id", "value", "type_id", "user_id", "created_at", "updated_at", "valueStartMonth") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["value", 10000], ["type_id", 1], ["user_id", 3], ["created_at", 2017-05-29 22:57:29 UTC], ["updated_at", 2017-05-29 22:57:29 UTC], ["valueStartMonth", 9000]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mType Load (0.5ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "meters" ("value", "type_id", "user_id", "created_at", "updated_at", "valueStartMonth") VALUES (?, ?, ?, ?, ?, ?)[0m  [["value", 15000], ["type_id", 2], ["user_id", 3], ["created_at", 2017-05-29 22:57:29 UTC], ["updated_at", 2017-05-29 22:57:29 UTC], ["valueStartMonth", 14500]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mType Load (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "meters" ("value", "type_id", "user_id", "created_at", "updated_at", "valueStartMonth") VALUES (?, ?, ?, ?, ?, ?)[0m  [["value", 20000], ["type_id", 3], ["user_id", 3], ["created_at", 2017-05-29 22:57:29 UTC], ["updated_at", 2017-05-29 22:57:29 UTC], ["valueStartMonth", 19300]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.5ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "limites" ("value", "meter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["value", 50], ["meter_id", 7], ["created_at", 2017-05-29 22:57:29 UTC], ["updated_at", 2017-05-29 22:57:29 UTC]]
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.5ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "limites" ("value", "meter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["value", 50], ["meter_id", 8], ["created_at", 2017-05-29 22:57:29 UTC], ["updated_at", 2017-05-29 22:57:29 UTC]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMeter Load (0.5ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "limites" ("value", "meter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["value", 50], ["meter_id", 9], ["created_at", 2017-05-29 22:57:29 UTC], ["updated_at", 2017-05-29 22:57:29 UTC]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 302 Found in 294ms (ActiveRecord: 75.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-29 23:57:29 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "3df7103893f0d52402b19dde068e78e438f2aaff"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 116ms (Views: 102.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/electricity" for 127.0.0.1 at 2017-05-29 23:57:31 +0100
+Processing by LoggedController#electricity as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "3df7103893f0d52402b19dde068e78e438f2aaff"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 7], ["LIMIT", 1]]
+  Rendering logged/electricity.html.erb within layouts/application
+  Rendered logged/electricity.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 129ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-29 23:57:33 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "3df7103893f0d52402b19dde068e78e438f2aaff"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 105ms (Views: 90.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/water" for 127.0.0.1 at 2017-05-29 23:57:34 +0100
+Processing by LoggedController#water as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "3df7103893f0d52402b19dde068e78e438f2aaff"], ["LIMIT", 1]]
+  [1m[36mMeter Load (0.0ms)[0m  [1m[34mSELECT  "meters".* FROM "meters" WHERE "meters"."type_id" = ? AND "meters"."user_id" = ? LIMIT ?[0m  [["type_id", 2], ["user_id", 3], ["LIMIT", 1]]
+  [1m[36mLimite Load (0.0ms)[0m  [1m[34mSELECT  "limites".* FROM "limites" WHERE "limites"."meter_id" = ? LIMIT ?[0m  [["meter_id", 8], ["LIMIT", 1]]
+  Rendering logged/water.html.erb within layouts/application
+  Rendered logged/water.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 122ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged" for 127.0.0.1 at 2017-05-29 23:57:36 +0100
+Processing by LoggedController#show as HTML
+  Rendering logged/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "3df7103893f0d52402b19dde068e78e438f2aaff"], ["LIMIT", 1]]
+  Rendered logged/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 136ms (Views: 116.2ms | ActiveRecord: 0.0ms)
+
+
