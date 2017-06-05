@@ -5,6 +5,7 @@ class LoggedController < ApplicationController
   def electricity
     @meter = Meter.find_by(type_id:1, user_id: current_user.id)
     @limite= Limite.find_by(meter_id:(3*current_user.id-2))
+    @consumption= Consumption.all
   end
 
   def water

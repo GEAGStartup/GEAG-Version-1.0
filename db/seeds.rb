@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Type.create(name:'eletrecity')
+Type.create(name:'water')
+Type.create(name:'gas')
