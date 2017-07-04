@@ -22,6 +22,16 @@ class LoggedController < ApplicationController
 
   end
 
+  def insertData
+
+  end
+
+  def insertValuesIntoDB
+    @meter = Meter.find_by(type_id: params[:meter][:value2], user_id: current_user.id)
+    @meter.update_attributes(value: params[:meter][:value1])
+    redirect_to logged_path
+  end
+
   def create
       @limite = Limite.find_by(meter_id:(3*current_user.id-2))
       @limite.update_attributes(value: params[:limite][:value1])

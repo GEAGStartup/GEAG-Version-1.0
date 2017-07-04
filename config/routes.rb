@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'settings', to:"logged#settings"
   delete 'logged', to: "layouts#application"
   get 'users', to: "users#index"
+  get 'insert', to: "logged#insertData"
+  post 'insert' => 'logged#insertValuesIntoDB'
   resources :meters
   resources :types
   resources :application

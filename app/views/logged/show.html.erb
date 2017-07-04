@@ -8,7 +8,8 @@
       <a href="electricity" class="button1" data-turbolinks="false">Eletricidade</a><br><br><br>
       <a href="water" class="button2" data-turbolinks="false">Água</a><br><br><br>
       <a href="gas" class="button3" data-turbolinks="false">Gás</a><br><br><br>
-      <%= button_to "", settings_path, :method => "get", :class => "myButtonSettings"%>
+      <%= button_to "", insert_path, :method => "get", :class => "myButtonInsert"%>
+      <%= button_to "", settings_path, :method => "get", :class => "myButtonSettings"%><br>
       <%= button_to 'Sign out', sign_out_path, method: :delete %>
   <% else %>
   <% end %>

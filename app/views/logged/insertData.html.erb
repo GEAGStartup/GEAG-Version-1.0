@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<%=  form_tag url: {controller: :logged, action: :insertValuesIntoDB }, html: { class: "listform"} do   %>
+    <%= label :meter, :ValorDoContador %>
+    <%= number_field :meter, :value1, in: 1.0..99999.0, required: true, placeholder: "Valor do Contador da Eletrecidade" %>
+    <br> <br>
+    <%= label :type, :TipoDoContador%>
+    <%= number_field :meter, :value2, in: 1.0..3, required: true, placeholder: "1-Eletrecidade 2-Àgua 3-Gás" %>
+    <br> <br>
+    <%= submit_tag "Guardar valor na base de dados" %>
+    <!--  <%= image_submit_tag("http://i.imgur.com/w2lkXzj.png") %></p>-->
+<% end %>
+</body>
+</html>

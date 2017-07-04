@@ -73,7 +73,18 @@
     border:none;
     width:30px;
     height:30px;
-    margin-left:100px;
+    margin-left:60px;
+
+}
+.myButtonInsert{
+    background:url(http://i.imgur.com/PFd8sbR.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:30px;
+    height:30px;
+    margin-left:10px;
+    float: left;
+    margin-bottom: 30px;
 }
 .rectangle{
     width:150px;
